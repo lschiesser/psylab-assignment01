@@ -1,6 +1,32 @@
-<html>
-<header><title>This is title</title></header>
-<body>
-"Hello,  !"
-</body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Psychology Lab Assignment 1</title>
+  </head>
+  <style type="text/css">
+    .all {
+      text-align: center;
+    }
+
+    #textDisplay {
+      font-size: 20px;
+      margin-top: 50px;
+    }
+  </style>
+  <script type="text/javascript">
+    function replaceHolder(){
+      var p = document.getElementById('textDisplay');
+      var txt = document.getElementById('inputBox');
+      var message = "Hello, " + txt.value + "!";
+      p.textContent = message;
+    }
+  </script>
+  <body>
+      <p class="all" id="textDisplay">Hello, _______!</p>
+      <form class="all" action="/set_name">
+        <input id="inputBox" type="text" placeholder="Enter name here">
+        <input id="btn" type="button" name="Button" value="Update" onclick="replaceHolder()">
+      </form>
+  </body>
 </html>
