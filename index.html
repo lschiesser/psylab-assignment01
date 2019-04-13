@@ -4,25 +4,26 @@
     <meta charset="utf-8">
     <title>Psychology Lab Assignment 1</title>
   </head>
+  <script type="text/javascript">
+    function pr() {
+      document.getElementById("result").innerHTML = "Hello, " + document.getElementById('lname').value +"!" ;
+    }
+  </script>
   <style type="text/css">
-    .all {
+  	.all {
       text-align: center;
     }
 
-
-<html>
-<header><title>Html file to show "Hello,____!"</title></header>
-<body>
-<form action="PayslipServlet" method="get">
-          "Hello, <input type="text" name="lname" id="lname"> ! <br/>
-          <br>
+    #result {
+      font-size: 20px;
+      margin-top: 50px;
+    }
+  </style>
+  <body>
+    <p class="all" id="result">Hello, _____!</p>
+    <form class="all" action="PayslipServlet" method="get">
+          <input type="text" name="lname" id="lname">
           <input type="button" value="Submit" onClick="pr()">
-        </form>
-        <script>
-          function pr() {
-            document.getElementById("result").innerHTML = "Hello, " + document.getElementById('lname').value +"!" ;
-          }
-        </script>
-<span id="result"></span>
-</body>
+    </form>
+  </body>
 </html>
